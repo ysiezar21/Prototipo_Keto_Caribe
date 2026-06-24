@@ -4,27 +4,6 @@ import { useApp } from '../store.jsx'
 import { formatCRC, calcularFechaMinima, formatFecha } from '../utils/factura.js'
 import ProductoImagen from './ProductoImagen.jsx'
 
-// Definido FUERA de Carrito: si estuviera adentro, se recrearia en cada
-// render y React desmontaria/montaria el <input> en cada tecla, haciendo
-// que el campo perdiera el foco despues de escribir un solo caracter.
-function Campo({ label, value, onChange, error, type = 'text', placeholder, full }) {
-  return (
-    <label className={full ? 'sm:col-span-2' : ''}>
-      <span className="text-sm font-medium text-charcoal/80">{label}</span>
-      <input
-        type={type}
-        value={value}
-        onChange={onChange}
-        placeholder={placeholder}
-        className={`mt-1 w-full rounded-lg border bg-white px-3 py-2 text-sm outline-none focus:border-keto ${
-          error ? 'border-red-400' : 'border-keto/20'
-        }`}
-      />
-      {error && <span className="text-xs text-red-500">{error}</span>}
-    </label>
-  )
-}
-
 export default function Carrito() {
   const {
     carrito, cambiarCantidad, quitarDelCarrito, totales, ir,
@@ -70,6 +49,22 @@ export default function Carrito() {
       { tipo: form.metodo, direccion: form.direccion, pago: form.pago },
     )
   }
+
+  const Campo = ({ label, k, type = 'text', placeholder, full }) => (
+    <label className={full ? 'sm:col-span-2' : ''}>
+      <span className="text-sm font-medium text-charcoal/80">{label}</span>
+      <input
+        type={type}
+        value={form[k]}
+        onChange={set(k)}
+        placeholder={placeholder}
+        className={`mt-1 w-full rounded-lg border bg-white px-3 py-2 text-sm outline-none focus:border-keto ${
+          errores[k] ? 'border-red-400' : 'border-keto/20'
+        }`}
+      />
+      {errores[k] && <span className="text-xs text-red-500">{errores[k]}</span>}
+    </label>
+  )
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
@@ -120,10 +115,10 @@ export default function Carrito() {
           <div className="rounded-2xl border border-keto/10 bg-white p-5 shadow-sm">
             <h2 className="font-display text-lg font-semibold text-keto-dark">Datos para la factura electrónica</h2>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
-              <Campo label="Nombre completo / razón social" value={form.nombre} onChange={set('nombre')} error={errores.nombre} placeholder="Ej. María Rodríguez" full />
-              <Campo label="Cédula / identificación" value={form.cedula} onChange={set('cedula')} error={errores.cedula} placeholder="Solo dígitos" />
-              <Campo label="Teléfono (WhatsApp)" value={form.telefono} onChange={set('telefono')} error={errores.telefono} placeholder="88880000" />
-              <Campo label="Correo (envío del comprobante)" value={form.correo} onChange={set('correo')} error={errores.correo} type="email" placeholder="correo@ejemplo.com" full />
+              <Campo label="Nombre completo / razón social" k="nombre" placeholder="Ej. María Rodríguez" full />
+              <Campo label="Cédula / identificación" k="cedula" placeholder="Solo dígitos" />
+              <Campo label="Teléfono (WhatsApp)" k="telefono" placeholder="88880000" />
+              <Campo label="Correo (envío del comprobante)" k="correo" type="email" placeholder="correo@ejemplo.com" full />
             </div>
 
             <h3 className="mt-5 font-display font-semibold text-keto-dark">Método de entrega</h3>
@@ -140,7 +135,7 @@ export default function Carrito() {
                 </button>
               ))}
             </div>
-            {form.metodo === 'Entrega a domicilio' && <div className="mt-3"><Campo label="Dirección de entrega" value={form.direccion} onChange={set('direccion')} error={errores.direccion} placeholder="Provincia, cantón, señas" full /></div>}
+            {form.metodo === 'Entrega a domicilio' && <div className="mt-3"><Campo label="Dirección de entrega" k="direccion" placeholder="Provincia, cantón, señas" full /></div>}
 
             <h3 className="mt-5 font-display font-semibold text-keto-dark">Método de pago</h3>
             <div className="mt-2 flex flex-wrap gap-2">
