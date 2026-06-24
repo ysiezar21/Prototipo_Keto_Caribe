@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+/* ===== Identidad visual Keto Caribe ===== */
+@theme {
+  --color-keto: #3ca55c;        /* Verde keto - primario */
+  --color-keto-dark: #1e5631;   /* Verde oscuro - encabezados */
+  --color-cream: #f5f1e6;       /* Crema - fondo */
+  --color-charcoal: #333333;    /* Gris carbon - texto */
+  --color-amber: #f2a900;       /* Ambar - llamadas a la accion */
+  --color-amber-dark: #d6960a;
+
+  --font-display: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Scrollbar discreto en paneles internos */
+.scroll-suave::-webkit-scrollbar { width: 8px; height: 8px; }
+.scroll-suave::-webkit-scrollbar-thumb {
+  background: rgba(60, 165, 92, 0.4);
+  border-radius: 8px;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fade-up 0.35s ease-out both; }

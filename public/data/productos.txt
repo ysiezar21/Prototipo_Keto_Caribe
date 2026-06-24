@@ -1,0 +1,30 @@
+# ===========================================================================
+# BASE DE DATOS DE PRODUCTOS - KETO CARIBE
+# IC4810 Administracion de Proyectos - Proyecto 3 - Grupo 4
+# Este archivo .txt actua como base de datos del prototipo (se carga por fetch).
+# Las lineas que inician con # son comentarios y se ignoran al parsear.
+#
+# Formato (separado por |):
+# id|nombre|categoria|precio|stock|umbral|tiempoHoras|cabys|emoji|imagen|descripcion|ingredientes|calorias|carbos|proteina|grasa
+#
+# precio en colones (CRC) | tiempoHoras = horas de elaboracion (cola de produccion)
+# umbral = nivel de stock bajo para alertas | cabys = codigo CABYS para factura electronica
+# emoji = respaldo si la imagen no carga
+# imagen = URL de foto real (sin API key). Se puede reemplazar por cualquier URL curada.
+# ===========================================================================
+1|Cheesecake Keto de Frutos Rojos|Postres|6500|8|5|2.0|2310901010100|🍰|https://loremflickr.com/600/600/cheesecake,raspberry?lock=1|Cheesecake cremoso endulzado con eritritol, base de almendra y cobertura de frutos rojos sin azucar anadida.|Queso crema, eritritol, harina de almendra, mantequilla, frutos rojos|320|6|9|28
+2|Brownie Sin Azucar|Postres|2800|3|5|1.0|2310901010100|🍫|https://loremflickr.com/600/600/brownie,chocolate?lock=2|Brownie humedo de chocolate 85% cacao, endulzado con monk fruit. Cero azucar, alto en fibra.|Cacao 85%, monk fruit, harina de almendra, huevo, mantequilla|210|4|6|18
+3|Pan Keto Artesanal|Panaderia|3900|12|6|1.5|2310901020000|🍞|https://loremflickr.com/600/600/keto,bread?lock=3|Pan bajo en carbohidratos con semillas, ideal para sandwiches. 2g de carbohidratos netos por rebanada.|Harina de almendra, psyllium, huevo, semillas de chia, linaza|90|2|5|7
+4|Galletas de Mantequilla Keto|Galletas|2500|20|8|0.5|2310901010200|🍪|https://loremflickr.com/600/600/cookies,butter?lock=4|Galletas crujientes de mantequilla y vainilla, endulzadas con eritritol. Paquete de 6 unidades.|Harina de almendra, mantequilla, eritritol, vainilla, huevo|150|3|4|13
+5|Cheesecake Keto de Limon|Postres|6500|0|5|2.0|2310901010100|🍋|https://loremflickr.com/600/600/cheesecake,lemon?lock=5|Cheesecake de limon caribeno, fresco y cremoso, sin azucar. Edicion regional Limon.|Queso crema, eritritol, limon, harina de almendra, mantequilla|310|5|9|27
+6|Muffins de Arandano Keto|Panaderia|3200|6|5|1.0|2310901020000|🧁|https://loremflickr.com/600/600/muffin,blueberry?lock=6|Muffins esponjosos de arandano sin azucar, perfectos para el desayuno. Paquete de 4.|Harina de almendra, arandanos, eritritol, huevo, polvo de hornear|130|4|5|10
+7|Pan de Coco Keto|Panaderia|4100|2|6|1.5|2310901020000|🥥|https://loremflickr.com/600/600/coconut,bread?lock=7|Pan suave de harina de coco, naturalmente bajo en carbohidratos y aromatico.|Harina de coco, huevo, mantequilla, psyllium, sal|95|3|6|6
+8|Trufas de Chocolate Keto|Postres|3500|15|8|0.5|2310901010100|🍬|https://loremflickr.com/600/600/chocolate,truffle?lock=8|Trufas de chocolate negro rellenas de ganache, endulzadas con monk fruit. Caja de 8.|Cacao 85%, crema, monk fruit, mantequilla, vainilla|90|2|2|8
+9|Granola Keto Casera|Snacks|4500|10|6|0.5|2310901030000|🥣|https://loremflickr.com/600/600/granola?lock=9|Granola crujiente de frutos secos y semillas tostadas, sin azucar. Bolsa de 250g.|Almendras, nueces, semillas de girasol, coco, eritritol|180|6|6|15
+10|Cafe Frio Keto (Bulletproof)|Bebidas|2200|18|8|0.3|2310901040000|☕|https://loremflickr.com/600/600/iced,coffee?lock=10|Cafe frio con MCT y mantequilla clarificada, cremoso y energizante. Botella 350ml.|Cafe, aceite MCT, ghee, crema, canela|160|1|2|17
+11|Pizza Keto Personal|Salados|5200|4|5|1.5|2310901050000|🍕|https://loremflickr.com/600/600/pizza?lock=11|Pizza personal con masa de fathead (queso y almendra), salsa sin azucar y toppings.|Queso mozzarella, harina de almendra, huevo, salsa de tomate, pepperoni|420|8|22|32
+12|Wrap Keto de Pollo|Salados|4800|7|5|1.0|2310901050000|🌯|https://loremflickr.com/600/600/chicken,wrap?lock=12|Wrap de tortilla baja en carbohidratos relleno de pollo, aguacate y vegetales.|Tortilla keto, pollo, aguacate, lechuga, mayonesa|380|7|26|26
+13|Donas Keto Glaseadas|Postres|3800|9|6|1.0|2310901010100|🍩|https://loremflickr.com/600/600/donut?lock=13|Donas horneadas con glaseado de eritritol, suaves y esponjosas. Paquete de 4.|Harina de almendra, eritritol, huevo, mantequilla, vainilla|170|4|5|14
+14|Barras de Proteina Keto|Snacks|3000|25|10|0.3|2310901030000|🍫|https://loremflickr.com/600/600/protein,bar?lock=14|Barras de proteina con chocolate y mantequilla de mani, 12g de proteina. Unidad.|Proteina de suero, mantequilla de mani, cacao, eritritol, almendras|200|5|12|14
+15|Cheesecake Keto de Maracuya|Postres|6800|5|5|2.0|2310901010100|🥭|https://loremflickr.com/600/600/cheesecake,mango?lock=15|Cheesecake tropical de maracuya caribeno, cremoso y sin azucar. Especialidad de la casa.|Queso crema, eritritol, maracuya, harina de almendra, mantequilla|315|6|9|27
+16|Limonada Keto de Jengibre|Bebidas|1800|22|8|0.2|2310901040000|🍹|https://loremflickr.com/600/600/lemonade,ginger?lock=16|Limonada refrescante endulzada con stevia y un toque de jengibre. Botella 500ml.|Limon, stevia, jengibre, agua, hierbabuena|15|3|0|0

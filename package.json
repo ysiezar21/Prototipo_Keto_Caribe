@@ -1,0 +1,24 @@
+{
+  "name": "keto-caribe-prototipo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Prototipo navegable - Plataforma Digital Keto Caribe (IC4810 Proyecto 3, Grupo 4)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "jspdf": "^4.2.1",
+    "lucide-react": "^0.460.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.0.0"
+  }
+}

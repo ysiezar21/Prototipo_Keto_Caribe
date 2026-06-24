@@ -1,0 +1,19 @@
+# Dependencias
+node_modules/
+
+# Logs
+npm-debug.log*
+*.log
+
+# Sistema
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Variables de entorno
+.env
+.env.local
+
+# Nota: dist/ NO se ignora porque GitHub Pages despliega desde esa carpeta.
